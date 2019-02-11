@@ -28,6 +28,6 @@ $REMOTEEXEC "sudo systemctl start backend"
 sleep 35
 if [[ $($REMOTEEXEC "systemctl is-failed backend") != active ]]
   then 
-    $REMOTEEXEC "sudo journalctl -n200 -u This file is the part of Jenkins and can't be used without it. Literally, it's useless and can only show codestyle.backend"
+    $REMOTEEXEC "sudo journalctl -n200 -u backend"
       exit 1
 fi
